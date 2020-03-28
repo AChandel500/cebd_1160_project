@@ -181,7 +181,7 @@ ax.set_yticklabels(RMSE_df.index, rotation=45)
 plt.title('Model Accuracy by Feature Selection Method (using RMSE value)', pad=25)
 
 if (args.figure_directory == os.getcwd()):
-    plt.savefig(f'{args.figure_directory}/figures/RMSE_heatmap', format='png')
+    plt.savefig(f'{args.figure_directory}/figures/RMSE_heatmap.png', format='png')
 else:
     plt.savefig(f'{args.figure_directory}/RMSE_heatmap.png', format='png')
 
