@@ -77,6 +77,7 @@ The figure below illustrates that the embedded feature selection method allowed 
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/RMSE_heatmap.png)
 
+#### Filter and Embedded Methods Data
 For the embedded and filter methods, the coefficient comparison and correlation table are respectively available below.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/embed_method_coeffs.png)
