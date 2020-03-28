@@ -66,7 +66,7 @@ In order to select the features for these models to perform predictions, the app
 * No criteria - all features are selected
   * Selecting all features is the simplest approach requiring the least investment to execute.
 * Filter method
-  * This method has a minimal computational requirement.  A correlation table between all features is assessed for features that relate highly with MEDV.  From the features selected, features that have dependencies between each other and that have the lowest correlation to MEDV are dropped.
+  * This method has a minimal computational requirement.  A correlation table between all features is assessed for features that relate highly with MEDV.  From the features selected, features that have dependencies between each other and that have the highest correlation to MEDV are dropped.
 * Embedded method
   * Relatively heavy computational requirement depending on dimensionality, as the method iteratively penalizes feature coefficients to bring their values to zero.  Features with a zero coefficient are not selected.
 
