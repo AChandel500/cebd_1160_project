@@ -82,7 +82,7 @@ For the embedded and filter methods, the coefficient comparison and correlation 
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/embed_method_coeffs.png)
 
-We can see above that INDUS, NOX and CHAS have zero valued coefficients are were dropped.
+We can see above that INDUS, NOX and CHAS have zero valued coefficients and were dropped.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/whole_corr_plot.png)
 
