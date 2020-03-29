@@ -93,7 +93,7 @@ RM was dropped by validating that the correlation between RM and LSTAT was signi
 ### Discussion
 Using an appropriate feature selection method can significantly improve model accuracy.
 
-Further methods could be applied to the dataset and other datasets could be used to obtain greater confirmation.
+Further methods could be applied to the dataset and other datasets could be used to obtain greater insight.
 
 ### References
 
