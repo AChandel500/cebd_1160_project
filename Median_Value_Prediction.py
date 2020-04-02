@@ -26,7 +26,7 @@ def load_data():
 
 
 def prepare_data(housing_dat):
-    """Globally adds column names to housing dataframe and outputs null value sums."""
+    """Adds column names to housing dataframe and outputs null value sums."""
     housing_dat.columns = ['CRIM', 'ZN', 'INDUS', 'CHAS', 'NOX', 'RM', 'AGE',
                            'DIS', 'RAD', 'TAX', 'PTRATIO', 'B', 'LSTAT', 'MEDV']
 
