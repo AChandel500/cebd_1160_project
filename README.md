@@ -73,7 +73,7 @@ In order to select the features for these models to perform predictions, the app
 ### Results
 #### RMSE Values for Feature Selection Methods
 
-The figure below illustrates that the embedded feature selection method allowed for the most accurate predictions, across all models, with an RMSE value of 8.3 x 10<sup>-15</sup> for LinearRegression as the lowest score.
+The figure below illustrates that the embedded feature selection method allowed for the most accurate predictions, across all models, with an RMSE value of 6 x 10<sup>-15</sup> for LinearRegression as the lowest score.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/RMSE_heatmap.png)
 
