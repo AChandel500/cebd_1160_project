@@ -69,11 +69,11 @@ In order to select the features for these models to perform predictions, the app
   * This method has a minimal computational requirement.  A correlation table between all features is assessed for features that relate highly with MEDV.  From the features selected, features that have dependencies between each other and that have the highest correlation to MEDV are dropped.
 * Embedded method
   * Relatively heavy computational requirement depending on dimensionality, as the method iteratively penalizes feature coefficients to bring their values to zero.  Features with a zero coefficient are not selected.
-
+  * Lasso regularization is at the core of the embedded method to determine which features can be discarded. The mathematical function which defines Lasso regression permits feature weightage coefficients to be exactly zero, as opposed to ridge regression for example.
 ### Results
 #### RMSE Values for Feature Selection Methods
 
-The figure below illustrates that the embedded feature selection method allowed for the most accurate predictions, across all models, with an RMSE value of 8.3 x 10<sup>-15</sup> for LinearRegression as the lowest score.
+The figure below illustrates that the embedded feature selection method allowed for the most accurate predictions, across all models, with an RMSE value of 6 x 10<sup>-15</sup> for LinearRegression as the lowest score.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/RMSE_heatmap.png)
 
