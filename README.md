@@ -93,7 +93,7 @@ RM was dropped by validating that the correlation between RM and LSTAT was signi
 
 ### Discussion
 
-The feature selection methods applied in this assessment affected prediction accuracy significantly in some cases whereas in others the observed impact was negligible or non-existent.   
+The feature selection methods applied in this assessment affected prediction accuracy significantly in some cases whereas in others the observed impact was negligible or nonexistent.   
 
 The filter method produced a signifcant decrease in prediction accuracy relative to both remaining approaches, and did so across all models.
 
