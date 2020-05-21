@@ -6,7 +6,7 @@ Amit Chandel | 28th March 2020
 ### Resources
 * Python script for assessment: Mean_Value_Prediction.py
 * Results figure/saved file: figures/
-* Dockerfile for your experiment: Dockerfile
+* Project Dockerfile: Dockerfile
 * runtime-instructions in a file named RUNME.md
 
 ## Research Question
@@ -66,14 +66,15 @@ In order to select the features for these models to perform predictions, the app
 * No criteria - all features are selected
   * Selecting all features is the simplest approach requiring the least investment to execute.
 * Filter method
-  * This method has a minimal computational requirement.  A correlation table between all features is assessed for features that relate highly with MEDV.  From the features selected, features that have dependencies between each other and that have the highest correlation to MEDV are dropped.
+  * This method has a minimal computational requirement.  A correlation table between all features is assessed for features that relate highly with MEDV.  From the features selected, features that have dependencies between each other and that have the weakest correlation to MEDV are dropped.
 * Embedded method
   * Relatively heavy computational requirement depending on dimensionality, as the method iteratively penalizes feature coefficients to bring their values to zero.  Features with a zero coefficient are not selected.
-  * Lasso regularization is at the core of the embedded method to determine which features can be discarded. The mathematical function which defines Lasso regression permits feature weightage coefficients to be exactly zero, as opposed to ridge regression for example.
+  * Lasso regularization (L1 regularization) is at the core of the embedded method.  The mathematical function which defines Lasso regression permits feature coefficients of the estimator function to be exactly zero (as opposed to ridge regression for example, which is very similar to Lasso) allowing for features that can be discarded to be selected before supplying data to machine learning models.
+  
 ### Results
 #### RMSE Values for Feature Selection Methods
 
-The figure below illustrates that the embedded feature selection method allowed for the most accurate predictions, across all models, with an RMSE value of 6 x 10<sup>-15</sup> for LinearRegression as the lowest score.
+The figure below illustrates that the no criteria method allowed for the most accurate prediction, with an RMSE value of 2.829 as the lowest score using the GradientBoostingRegressor.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/RMSE_heatmap.png)
 
@@ -82,18 +83,23 @@ For the embedded and filter methods, the coefficient comparison and correlation 
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/embed_method_coeffs.png)
 
-We can see above that INDUS, NOX and CHAS have zero valued coefficients and were dropped.
+We can see above that regularization yielded a zero-valued coefficient for the AGE feature, which was subsequently dropped for median house value prediction using the embedded method.
 
 ![Root Mean Square Error (RMSE)](https://github.com/AChandel500/cebd_1160_project/blob/master/figures/whole_corr_plot.png)
 
 From the figure above, we can see that RM, LSTAT and PTRATIO relate highly with MEDV.  
 
-RM was dropped by validating that the correlation between RM and LSTAT was significant at -0.6138.
+RM was dropped by validating that the correlation between RM and LSTAT was significant at -0.6138 and that RM related to MEDV with a coefficient of 0.7. 
 
 ### Discussion
-Using an appropriate feature selection method can significantly improve model accuracy.
 
-Further methods could be applied to the dataset and other datasets could be used to obtain greater insight.
+The feature selection methods applied in this assessment affected prediction accuracy significantly in some cases whereas in others the observed impact was negligible or non-existent.   
+
+The filter method produced a signifcant decrease in prediction accuracy relative to both remaining approaches, and did so across all models.
+
+The embedded method produced RMSE results identical to that of full feature selection (no criteria) for 50% of the models, with a marginal relative increase in accuracy using the KNeighboursRegressor model and marginal relative decreases in accuracy using the GradientBoostingRegressor and SVR models.    
+
+Further assessment using differing datasets would provide greater insight.   
 
 ### References
 
