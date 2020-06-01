@@ -1,8 +1,8 @@
 # CEBD 1160 Project - Assessment of Feature Selection methods on Prediction Accuracy
 Submitted to CCE for CEBD1160 Winter 2020 Project Requirement 
-Submitted by | Date
------------- | -------------
-Amit Chandel | 28th March 2020
+Submitted by |
+------------ | 
+Amit Chandel |
 ### Resources
 * Python script for assessment: Mean_Value_Prediction.py
 * Results figure/saved file: figures/
